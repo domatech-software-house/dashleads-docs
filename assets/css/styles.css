@@ -1,0 +1,11 @@
+@font-face { font-family: QuentinPro; src: url('../font/QuentinPro.ttf'); }
+
+body{ font-family: 'Exo', sans-serif; } 
+
+/* Navbar */
+
+.navbar{ background: #31b88a;}
+
+.navbar-brand{ font-family: 'QuentinPro'; color: #fff !important;} 
+
+.navbar-brand span{ font-family: 'Exo', sans-serif; font-size: 15px; }

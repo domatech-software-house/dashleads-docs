@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard Leads for Developers</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css?family=Exo:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar mb-5">
+        <a class="navbar-brand" href="https://dashboardleads.com.br">Dashboard Leads <span class="ml-1">for
+                developers</span></a>
+    </nav>
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12">
+                <h2 class="mb-4">Guia de integração de leads</h2>
+                <p class="text-justify">
+                    O acesso a API é um recurso premium disponível apenas para clientes. No entanto, os desenvolvedores
+                    com ideias para aplicativos integrando o Dashboard Leads sempre são bem-vindos. Para saber como
+                    configurar uma conta teste com acesso a API, entrar em contato com dev@domatech.com.br.
+                </p>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12">
+                <h2 class="mb-4">Data</h2>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Fields</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Required</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-bold">token</td>
+                                <td class="text-success font-weight-bold">String</td>
+                                <td class="text-danger font-weight-bold">true</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">name</td>
+                                <td class="text-success font-weight-bold">String</td>
+                                <td class="text-danger font-weight-bold">true</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">email</td>
+                                <td class="text-success font-weight-bold">String</td>
+                                <td class="text-danger font-weight-bold">true</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">phone</td>
+                                <td class="text-success font-weight-bold">String</td>
+                                <td class="text-danger font-weight-bold">true</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">date</td>
+                                <td class="text-primary font-weight-bold">Date</td>
+                                <td class="text-danger font-weight-bold">true</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">target</td>
+                                <td class="text-success font-weight-bold">String</td>
+                                <td class="text-danger font-weight-bold">true</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">status</td>
+                                <td class="text-success font-weight-bold">String</td>
+                                <td class="text-danger font-weight-bold">true</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">comments</td>
+                                <td class="text-success font-weight-bold">String</td>
+                                <td>false</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">extraFieldOne <span class="text-danger">*</td>
+                                <td class="text-success font-weight-bold">String</td>
+                                <td>false</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">extraFieldTwo <span class="text-danger">*</td>
+                                <td class="text-success font-weight-bold">String</td>
+                                <td>false</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">extraFieldThree <span class="text-danger">*</td>
+                                <td class="text-success font-weight-bold">String</td>
+                                <td>false</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">extraFieldFour <span class="text-danger">*</td>
+                                <td class="text-success font-weight-bold">String</td>
+                                <td>false</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">extraFieldFive <span class="text-danger">*</td>
+                                <td class="text-success font-weight-bold">String</td>
+                                <td>false</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">extraFieldSix <span class="text-danger">*</span></td>
+                                <td class="text-success font-weight-bold">String</td>
+                                <td>false</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 mb-3 d-inline-flex mt-2">
+                    <span class="text-danger">*</span>
+                    <p class="small ml-2 mb-0">
+                        Campos disponíveis apenas para formulários personalizados.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="mb-4">Request</h2>
+            </div>
+            <div class="col-12 mb-4">
+                <h4 class="mb-3">Route</h3>
+                    <pre
+                        class="bg-light p-4 m-0"><span class="text-danger mr-2 font-weight-bold">POST</span> https://ws.dashboardleads.com.br/api/v1.0/lead</pre>
+            </div>
+            <div class="col-12 mb-4">
+                <h4 class="mb-3">Header</h3>
+                    <pre class="bg-light p-4 m-0">Content-Type: application/json</pre>
+            </div>
+            <div class="col-12 mb-4">
+                <h4 class="mb-3">Body</h3>
+                    <pre
+                        class="bg-light p-4 m-0">{<p class="mb-0 ml-4">"token": "YOUR_TOKEN",</p><p class="mb-0 ml-4">"name": "Test",</p><p class="mb-0 ml-4">"email": "test@test.com",</p><p class="mb-0 ml-4">"phone": "(00) 00000-0000",</p><p class="mb-0 ml-4">"date": "1998-05-04",</p><p class="mb-0 ml-4">"target": "Test",</p><p class="mb-0 ml-4">"status": "Test",</p><p class="mb-0 ml-4">"comments": "Long Text",</p><p class="mb-0 ml-4">"extraFieldOne": "Test",</p><p class="mb-0 ml-4">"extraFieldTwo": "Test",</p><p class="mb-0 ml-4">"extraFieldThree": "Test",</p><p class="mb-0 ml-4">"extraFieldFour": "Test",</p><p class="mb-0 ml-4">"extraFieldFive": "Test",</p><p class="mb-0 ml-4">"extraFieldSix": "Test"</p>}</pre>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12">
+                <h2 class="mb-4">Response</h2>
+            </div>
+            <div class="col-12 mb-4">
+                <h4 class="mb-3">Status</h3>
+                    <pre class="bg-light p-4 m-0"><span class="text-success mr-2 font-weight-bold">200</span></pre>
+            </div>
+            <div class="col-12 mb-4">
+                <h4 class="mb-3">Body</h3>
+                    <pre
+                        class="bg-light p-4 m-0">{<p class="mb-0 ml-4">"_id": "ID_LEAD",</p><p class="mb-0 ml-4">"name": "Test",</p><p class="mb-0 ml-4">"email": "test@test.com",</p><p class="mb-0 ml-4">"phone": "(00) 00000-0000",</p><p class="mb-0 ml-4">"date": "1998-05-04",</p><p class="mb-0 ml-4">"target": "Test",</p><p class="mb-0 ml-4">"status": "Test",</p><p class="mb-0 ml-4">"comments": "Long Text",</p><p class="mb-0 ml-4">"extraFieldOne": "Test",</p><p class="mb-0 ml-4">"extraFieldTwo": "Test",</p><p class="mb-0 ml-4">"extraFieldThree": "Test",</p><p class="mb-0 ml-4">"extraFieldFour": "Test",</p><p class="mb-0 ml-4">"extraFieldFive": "Test",</p><p class="mb-0 ml-4">"extraFieldSix": "Test"</p><p class="mb-0 ml-4">"createdAt": "1998-05-04T00:00:00.000Z",</p><p class="mb-0 ml-4">"updatedAt": "1998-05-04T00:00:00.000Z"</p>}</pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center small py-3 text-muted">
+                &copy; <a href="https://dashboardleads.com.br" class="text-muted" target="_Blank">Dashboard Leads</a> -
+                Todos os direitos reservados.
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
